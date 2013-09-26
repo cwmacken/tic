@@ -5,43 +5,40 @@ function home(){
 	window.location.href="index.html"
 }
 
-
-
 var turn =1;
 
 function playBox(){
-		event.target.innerHTML = "X"
 		switch(turn)
 				{
 					case 1:
-						event.target.innerHTML = "X"
+						event.target.innerHTML = "X";
 						break;
 					case 2:
-						event.target.innerHTML = "0"
+						event.target.innerHTML = "0";
 						break;
 					case 3:
-						event.target.innerHTML = "X"
+						event.target.innerHTML = "X";
 						break;
 					case 4:
-						event.target.innerHTML = "0"
+						event.target.innerHTML = "0";
 						break;
 					case 5:
-						event.target.innerHTML = "X"
+						event.target.innerHTML = "X";
 						break;
 					case 6:
-						event.target.innerHTML = "0"
+						event.target.innerHTML = "0";
 						break;
 					
 					case 7:
-						event.target.innerHTML = "X"
+						event.target.innerHTML = "X";
 						break;
 					case 8:
-						event.target.innerHTML = "0"
+						event.target.innerHTML = "0";
 						break;
-					
 					case 9:
-						event.target.innerHTML = "X"
+						event.target.innerHTML = "X";
 						break;
+
 				}
 				
 		turn = turn+1
