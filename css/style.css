@@ -32,11 +32,17 @@ nav{
 	margin: 75px auto;
 }
 
-.st{
-	margin: 75px auto;
-	background-color: white;	
+.strBtnContain{
+	margin: 75px auto;	
 	width: 200px;
-	height: 100px
+	height: 100px;
+	text-align: center;
+	
+}
+.strBtn{
+	width: 100%;
+	height: 100px;
+
 }
 
 .actionBox{
