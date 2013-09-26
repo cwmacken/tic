@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="/main.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/main.js"></script>
 	</head>
 	<body>
 	<div class="container">
 		<nav>
-			<button class="menuItem">
-				<p>HOME</p>
+			<button class="menuItem" onclick="home()">
+				HOME
 			</button>
-			<button class="menuItem">
-				<p>Credits</p>
+			<button class="menuItem" onclick="strGame()">
+				RESET
 			</button>
-			<button class="menuItem">
+			<!-- <button class="menuItem">
 				<p>Other stuff</p>
-			</button>
+			</button> -->
 		</nav>
 
 		<div class="gameContainer">
 
-			<div class="actionBox"></div>
-			<div class="actionBox"></div>
-			<div class="actionBox"></div>
+			<div class="actionBox" onclick="playBox()"></div>
+			<div class="actionBox" onclick="playBox()"></div>
+			<div class="actionBox" onclick="playBox()"></div>
 			
-			<div class="clear actionBox "></div>
-			<div class="actionBox"></div>
-			<div class="actionBox"></div>
+			<div class="clear actionBox" onclick="playBox()"></div>
+			<div class="actionBox" onclick="playBox()"></div>
+			<div class="actionBox" onclick="playBox()"></div>
 			
-			<div class="clear actionBox	"></div>
-			<div class="actionBox"></div>
-			<div class="actionBox"></div>
+			<div class="clear actionBox	" onclick="playBox()"></div>
+			<div class="actionBox" onclick="playBox()"></div>
+			<div class="actionBox" onclick="playBox()"></div>
 
 		</div>
 	</div>

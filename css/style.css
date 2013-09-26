@@ -1,5 +1,6 @@
 body{
-	background-color: black
+	background-color: black;
+	font: arial;
 }
 
 
@@ -12,6 +13,7 @@ nav{
 	height: 100px;
 	background-color: white;
 	text-align: center;
+	font: arial;
 
 }
 .menuItem{
@@ -50,6 +52,10 @@ nav{
 		margin: 2px;
 		background-color: black;
 		float: left;
+		color: white;
+		font: sans-serif;
+		font-size: 6em;
+		text-align: center;
 }
 .clear{
 	clear: both;
