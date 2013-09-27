@@ -12,6 +12,7 @@ alert(cellArray);
 
 
 }
+
 // var lookup = ["a","b","c","d","e","f","g","i"]
 
 // function navCells(){
@@ -27,53 +28,64 @@ alert(cellArray);
 
 var turn =1;
 
+
 function playBox(){
-	if(event.target==0){
+	if(event.target.innerHTML==0){
 		switch(turn)
 				{	
 					case 1:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
+						document.getElementById('x').innerHTML = "O's";
 						break;
 					case 2:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
+						document.getElementById('x').innerHTML = "X's";
 						break;
 					case 3:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
+						document.getElementById('x').innerHTML = "O's";
 						break;
 					case 4:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
+						document.getElementById('x').innerHTML = "X's";
 						break;
 					case 5:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
+						document.getElementById('x').innerHTML = "O's";
 						break;
 					case 6:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
+						document.getElementById('x').innerHTML = "X's";
 						break;
 					
 					case 7:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
+						document.getElementById('x').innerHTML = "O's";
 						break;
 					case 8:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
+						document.getElementById('x').innerHTML = "X's";
 						break;
 					case 9:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
+						document.getElementById('x').innerHTML = "O's";
 						break;
 
 
 				}
 			}
 		else{
-			alert('NO DICE!')
+			
+			turn= turn-1
 		}	
 		turn = turn+1
 }
@@ -153,7 +165,8 @@ function check(){
 		)
 	)
 		{
-	  		alert('X wins!')
+	  		document.getElementById('x').innerHTML = "X";
+	  		document.getElementById('o').innerHTML = "WINS!";
 	  	}
 	 else if(
 		(
@@ -189,13 +202,15 @@ function check(){
 		)
 	)
 		{
-	  		alert('O wins!')
+	  		document.getElementById('x').innerHTML = "O";
+	  		document.getElementById('o').innerHTML = "WINS!";
 	  	}
 
 
 	 else{
 	 	if(turn==10){
-	 		alert('DRAW')
+	 		document.getElementById('x').innerHTML = "        DRAW";
+	  		document.getElementById('o').innerHTML = "!";
 	 	}
 	 }
 }
