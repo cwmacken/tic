@@ -28,6 +28,7 @@ alert(cellArray);
 var turn =1;
 
 function playBox(){
+	if(event.target==0){
 		switch(turn)
 				{	
 					case 1:
@@ -68,8 +69,12 @@ function playBox(){
 						event.target.value = 1;
 						break;
 
+
 				}
-				
+			}
+		else{
+			alert('NO DICE!')
+		}	
 		turn = turn+1
 }
 
@@ -82,7 +87,25 @@ function check(){
 
 	// var lookup = ["a","b","c","d","e","f","g","h","i"]
 
+	// t=i
+	// for(i=0;i<=lookup.length;++i){
+	// 	switch(t){
+	// 		case t:
+	// 			lookup[i] = document.getElementById(lookup[i]).value;
+	// 	}
+	// }
+	
+
+	// i= i+1
+	
+	// I DONT THINK IS IS STORING THE VARUBLE "A"?????
+
+
+
 	// for(i=0;i<lookup.length;++i){
+	// 	var (lookup[i]= lookup[i]) = document.getElementById(lookup[i]).value;
+
+	// }
 
 		var a = document.getElementById('a').value;
 		var b = document.getElementById('b').value;
@@ -98,40 +121,83 @@ function check(){
 
 	if(
 		(
-			(a+b+c==-3) || (a+b+c==3) 
+			(a+b+c==3) 
 		) 
 			|| 
 		(
-			(d+e+f==-3) || (d+e+f==3)
+			(d+e+f==3)
 		)
 			|| 
 	  	(
-	  		(g+h+i==-3) || (g+h+i==3) 
+	  		(g+h+i==3) 
 	  	)
 	  		||
 	  	(
-	  		(a+d+g==-3) || (a+d+g==3)
+	  		(a+d+g==3)
 	  	) 	
 	  		|| 
 	  	(
-	  		(b+e+h==-3) || (b+e+h==3) 
+	  		(b+e+h==3) 
 	  	)
 	  		|| 
 		( 
-			(c+f+i==-3) || (c+f+i==3)
+			(c+f+i==3)
 		) 
 			||
 		(
-			(a+e+i==-3) || (a+e+i==3)
+			(a+e+i==3)
 		) 
 			|| 
 		(
-			(c+e+g==-3) || (c+e+g==3) 
+			(c+e+g==3) 
 		)
 	)
 		{
-	  		alert('WINNER!')
+	  		alert('X wins!')
 	  	}
+	 else if(
+		(
+			(a+b+c==-3)  
+		) 
+			|| 
+		(
+			(d+e+f==-3) 
+		)
+			|| 
+	  	(
+	  		(g+h+i==-3)
+	  	)
+	  		||
+	  	(
+	  		(a+d+g==-3) 
+	  	) 	
+	  		|| 
+	  	(
+	  		(b+e+h==-3) 
+	  	)
+	  		|| 
+		( 
+			(c+f+i==-3) 
+		) 
+			||
+		(
+			(a+e+i==-3) 
+		) 
+			|| 
+		(
+			(c+e+g==-3) 
+		)
+	)
+		{
+	  		alert('O wins!')
+	  	}
+
+
+	 else{
+	 	if(turn==10){
+	 		alert('DRAW')
+	 	}
+	 }
 }
 	
 	
