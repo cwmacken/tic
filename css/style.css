@@ -34,15 +34,66 @@ nav{
 	border-style: solid;
 
 }
+.alertBox{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display:none;
+
+	
+}
+	
+.alert{
+	margin: 120px auto;
+	width: 216px;
+	height: 216px;
+	z-index: 1;
+	background-color: #639beb;
+	color: black;
+	border-color: #456cab;
+	border-width: 7px;
+	border-style: solid;
+	border-radius: 121px;
+	font-family: 'Press Start 2P',cursive;
+	text-align: center;	
+
+}
+
+.alertText{
+	margin-top: 47%;
+	margin-left: 8%;
+}
 button{
 	border-radius: 55px;
 	font-family: 'Press Start 2P',cursive;
 }
 .gameContainer{
+
 	width: 308px;
 	height: 308px;	
 	background-color: #639beb;
 	margin: 75px auto;
+}
+
+.formContain{
+	margin: 75px auto;	
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	color:#639beb;
+
+}
+
+.txtInpt{
+	width: 100%;
+	height: 100%;	
+	background-color: #639beb;
+	text-align: center;
+	border-color: #456cab;
+	border-width: 7px;
+	border-style: solid;
+	font-family: 'Press Start 2P', cursive;
 }
 
 .strBtnContain{
@@ -116,7 +167,9 @@ button{
 		text-align: center;
 		padding:9px 0px 0px 0px;
 }
+
 #a{}
+
 .indiContain{
 	width:100%;
 	height: 100px;

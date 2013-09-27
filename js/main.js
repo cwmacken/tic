@@ -122,8 +122,11 @@ function check(){
 		)
 	)
 		{
-	  		document.getElementById('x').innerHTML = "X";
-	  		document.getElementById('o').innerHTML = "WINS!";
+	  		document.getElementById('x').innerHTML = "";
+	  		document.getElementById('o').innerHTML = "";
+	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
+	  		document.getElementsByClassName('alertText')[0].innerHTML = "X WINS!!!";
+	  		setTimeout("strGame();",3000);
 	  	}
 	 else if(
 		(
@@ -159,15 +162,23 @@ function check(){
 		)
 	)
 		{
-	  		document.getElementById('x').innerHTML = "O";
-	  		document.getElementById('o').innerHTML = "WINS!";
+	  		document.getElementById('x').innerHTML = "";
+	  		document.getElementById('o').innerHTML = "";
+	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
+	  		document.getElementsByClassName('alertText')[0].innerHTML = "O WINS!!!";
+	  		setTimeout("strGame();",3000);
+	  		
+
 	  	}
 
 
 	 else{
 	 	if(turn==10){
-	 		document.getElementById('x').innerHTML = "        DRAW";
-	  		document.getElementById('o').innerHTML = "!";
+	 		document.getElementById('x').innerHTML = "";
+	  		document.getElementById('o').innerHTML = "";
+	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
+	  		document.getElementsByClassName('alertText')[0].innerHTML = "DRAW...";
+	  		setTimeout("strGame();",3000);
 	 	}
 	 }
 }
@@ -300,8 +311,12 @@ function checkO(){
 		)
 	)
 		{
-	  		document.getElementById('x').innerHTML = "O";
-	  		document.getElementById('o').innerHTML = "WINS!";
+	  		
+	  		document.getElementById('x').innerHTML = "";
+	  		document.getElementById('o').innerHTML = "";
+	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
+	  		document.getElementsByClassName('alertText')[0].innerHTML = "O WINS!!!";
+	  		setTimeout("strGame();",3000);
 	  	}
 	 else if(
 		(
@@ -337,15 +352,21 @@ function checkO(){
 		)
 	)
 		{
-	  		document.getElementById('x').innerHTML = "X";
-	  		document.getElementById('o').innerHTML = "WINS!";
+	  		document.getElementById('x').innerHTML = "";
+	  		document.getElementById('o').innerHTML = "";
+	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
+	  		document.getElementsByClassName('alertText')[0].innerHTML = "X WINS!!!";
+	  		setTimeout("strGame();",3000);
 	  	}
 
 
 	 else{
 	 	if(turnO==10){
-	 		document.getElementById('x').innerHTML = "        DRAW";
-	  		document.getElementById('o').innerHTML = "!";
+	 		document.getElementById('x').innerHTML = "";
+	  		document.getElementById('o').innerHTML = "";
+	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
+	  		document.getElementsByClassName('alertText')[0].innerHTML = "DRAW...";
+	  		setTimeout("strGame();",3000);
 	 	}
 	 }
 }
