@@ -22,16 +22,17 @@
 			</button> -->
 		</nav>
 		<div class="mainBody">
-			<form class="formContain">
-				PLAYER 1:<input class="txtInpt" type="text" name="player1" value=""><br>
-				PLAYER 2: <input class="txtInpt" type="text" name="player2" value="">
-
-				<p></p>
-				<!-- <input class="strBtn" type="submit" value="START"> -->
-			</form>
-
+			<form class="formContain" action="game.html" method="link" >
+				<div class="txtInptCenter">
+					<input class="txtInpt" id="p1"type="text" name="player1" value="PLAYER 1">
+					<input class="txtInpt" id="p2" type="text" name="player2" value="PLAYER2">
+					
+					<!-- <input class="strBtn" type="submit" value="START"> -->
+				</div>
+			
+			<p>P1 X's or O's?</p>
 			<div class="strBtnContain">
-				<button class="strBtn" onclick="strGame()"> X'S</button>
+				<button type="submit" class="strBtn" onclick=""> X'S</button>
 			</div>
 			<div class="or">
 				OR
@@ -39,8 +40,9 @@
 			<div class="strBtnContain">
 				<button class="strBtn" onclick="strGameO()"> 0'S</button>
 			</div>
+		</form>
 
-		</div>
+	</div>
 	</div>
 
 	</body>

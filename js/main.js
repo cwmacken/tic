@@ -1,10 +1,12 @@
 function strGame(){
-				window.location.href="game.html"
+		window.location.href="game.html"
 		}
 function home(){
 	window.location.href="index.html"
 }
 
+var p1Name = document.getElementById('p1').value;
+var p2Name = document.getElementById('p2').value;
 
 var turn =1;
 
@@ -16,48 +18,48 @@ function playBox(){
 					case 1:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
-						document.getElementById('x').innerHTML = "O's";
+						document.getElementById('x').innerHTML = p2Name;
 						break;
 					case 2:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
-						document.getElementById('x').innerHTML = "X's";
+						document.getElementById('x').innerHTML = p1Name;
 						break;
 					case 3:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
-						document.getElementById('x').innerHTML = "O's";
+						document.getElementById('x').innerHTML = p2Name;
 						break;
 					case 4:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
-						document.getElementById('x').innerHTML = "X's";
+						document.getElementById('x').innerHTML = p1Name;
 						break;
 					case 5:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
-						document.getElementById('x').innerHTML = "O's";
+						document.getElementById('x').innerHTML = p2Name;
 						break;
 					case 6:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
-						document.getElementById('x').innerHTML = "X's";
+						document.getElementById('x').innerHTML = p1Name;
 						break;
 					
 					case 7:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
-						document.getElementById('x').innerHTML = "O's";
+						document.getElementById('x').innerHTML = p2Name;
 						break;
 					case 8:
 						event.target.innerHTML = "0";
 						event.target.value = -1;
-						document.getElementById('x').innerHTML = "X's";
+						document.getElementById('x').innerHTML = P1Name;
 						break;
 					case 9:
 						event.target.innerHTML = "X";
 						event.target.value = 1;
-						document.getElementById('x').innerHTML = "O's";
+						document.getElementById('x').innerHTML = P2Name;
 						break;
 
 
@@ -78,7 +80,7 @@ function check(){
 
 		var a = document.getElementById('a').value;
 		var b = document.getElementById('b').value;
-		var c  = document.getElementById('c').value;
+		var c = document.getElementById('c').value;
 
 		var d = document.getElementById('d').value;
 		var e = document.getElementById('e').value;
