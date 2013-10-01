@@ -6,44 +6,77 @@
 		<script language="JavaScript" src="js/main.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 		
-	</head>
-	<body>
-	<div class="container">
+</head>
+<body>
+
+	<div class="container" id="startPage">
 		<nav>
 			<p class="header">TIC / TAC / TOE</p>
-			<!-- <button class="menuItem" onclick="pressStart()">
-				<p>WANNA PLAY A GAME?</p>
-			</button> -->
-			<!-- <button class="menuItem">
-				<p>Credits</p>
-			</button>
-			<button class="menuItem">
-				<p>Other stuff</p>
-			</button> -->
 		</nav>
-		<div class="mainBody">
-			<form class="formContain" action="game.html" method="link" >
-				<div class="txtInptCenter">
-					<input class="txtInpt" id="p1"type="text" name="player1" value="PLAYER 1">
-					<input class="txtInpt" id="p2" type="text" name="player2" value="PLAYER2">
-					
-					<!-- <input class="strBtn" type="submit" value="START"> -->
-				</div>
-			
-			<p>P1 X's or O's?</p>
-			<div class="strBtnContain">
-				<button type="submit" class="strBtn" onclick=""> X'S</button>
-			</div>
-			<div class="or">
-				OR
-			</div>
-			<div class="strBtnContain">
-				<button class="strBtn" onclick="strGameO()"> 0'S</button>
-			</div>
-		</form>
-
+      <!-- the action will adjust the URL... Saving for later -->
+  		<div class="mainBody">
+  			<div class="formContain">
+  				<div class="txtInptCenter">
+  					<input class="txtInpt" id="p1" type="text" value="PLAYER 1"/>
+  					<input class="txtInpt" id="p2" type="text" value="PLAYER 2"/>
+  					
+  					<!-- <input class="strBtn" type="submit" value="START"> -->
+  				</div>
+  			  <p class="startText">P1 X's or O's?</p>
+  			  <div class="strBtnContain">
+  				  <button class="strBtn" onclick="strGame()"> X'S</button>
+  			  </div>
+  			  <div class="or">
+  				  OR
+  			  </div>
+  			  <div class="strBtnContain">
+  				  <button class="strBtn" onclick="strGame()"> 0'S</button>
+  			  </div>
+  		  </div>
+      </div>
 	</div>
-	</div>
+  <div class="container" id="game">
+    <nav>
+      <button class="menuItem" onclick="home()">
+        HOME
+      </button>
+      <button class="menuItem" onclick="reset()">
+        RESET
+      </button>
+      <!-- <button class="menuItem">
+        <p>Other stuff</p>
+      </button> -->
+    </nav>
+    <div class="alertBox">
+        <div class="alert">
+          <div class="alertText">
+            WINNER
+          </div>
+        </div>
+      </div>
 
-	</body>
+    <div class="gameContainer" onclick="check()">
+
+       
+
+      <div class="actionBox" id="a" value="0" onclick="playBox()"></div>
+      <div class="actionBox" id="b" value="0" onclick="playBox()"></div>
+      <div class="actionBox" id="c" value="0" onclick="playBox()"></div>
+      
+      <div class="clear actionBox" id="d" value="0" onclick="playBox()"></div>
+      <div class="actionBox" id="e" value="0" onclick="playBox()"></div>
+      <div class="actionBox" id="f" value="0" onclick="playBox()"></div>
+      
+      <div class="clear actionBox" id="g" value="0" onclick="playBox()"></div>
+      <div class="actionBox" id="h" value="0" onclick="playBox()"></div>
+      <div class="actionBox" id="i" value="0" onclick="playBox()"></div>
+
+    </div>
+    <div class="indiContain">
+      <div class="indicate" id="x"></div>
+      <div class="indicate" id="o">TURN</div>
+    </div>
+  </div>
+
+</body>
 </html>
