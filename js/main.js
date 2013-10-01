@@ -1,11 +1,24 @@
 
 var p1Name = 'Player 1';
 var p2Name = 'PLayer 2';
+var choiceX = "X";
+var choiceO = "O";
 
+function chooseO(){
+  
+  var pickX = "O";
+  var pickO = "X";
+  choiceX = pickX ;
+  choiceO = pickO;
+  strGame();
+  return choiceX, choiceO;
+  
 
+}
 
 function strGame(){
-	document.getElementById('game').style.display="inline";
+	
+  document.getElementById('game').style.display="inline";
 	document.getElementById('startPage').style.display="none";
   var p1Hold = document.getElementById('p1').value;
   var p2Hold = document.getElementById('p2').value;
@@ -13,7 +26,15 @@ function strGame(){
   p1Name = p1Hold.toUpperCase();
   p2Name = p2Hold.toUpperCase();
 	return p1Name, p2Name;
+
   }
+
+// function chooseX(){
+//   var choice = "X";
+//   return choice;
+// }
+
+
 
 function reset(){
   var lookup=['a','b','c','d','e','f','g','h','i'];
@@ -24,6 +45,7 @@ function reset(){
         document.getElementById(lookup[z]).innerHTML="";
         document.getElementsByClassName('alertBox')[0].style.display = "none";
         document.getElementById('o').innerHTML = "TURN";
+        document.getElementById('x').innerHTML = p1Name+'\'S';
         turn = 1
 
 
@@ -31,61 +53,72 @@ function reset(){
 }
 
 function home(){
-	document.getElementById('game').style.display="none";
-	document.getElementById('startPage').style.display="inline";
+
+
+  var lookup=['a','b','c','d','e','f','g','h','i'];
+
+  for(var z=0;z<=8;z++){
+   
+        document.getElementById(lookup[z]).value=0;
+        document.getElementById(lookup[z]).innerHTML="";
+        
+        turn =1
+};
+      document.getElementsByClassName('alertBox')[0].style.display = "none";
+      document.getElementById('game').style.display="none";
+      document.getElementById('startPage').style.display="inline";
 			
 }
 // document.getElementById('x').innerHTML = p1Name;
 var turn =1;
-
 
 function playBox(){
 	if(event.target.innerHTML==""){
 		switch(turn)
 				{	
 					case 1:
-						event.target.innerHTML = "X";
+						event.target.innerHTML = choiceX;
 						event.target.value = 1;
 						document.getElementById('x').innerHTML = p2Name+'\'S';
 						break;
 					case 2:
-						event.target.innerHTML = "0";
+						event.target.innerHTML = choiceO;
 						event.target.value = -1;
 						document.getElementById('x').innerHTML = p1Name+'\'S';
 						break;
 					case 3:
-						event.target.innerHTML = "X";
+						event.target.innerHTML = choiceX;
 						event.target.value = 1;
 						document.getElementById('x').innerHTML = p2Name+'\'S';
 						break;
 					case 4:
-						event.target.innerHTML = "0";
+						event.target.innerHTML = choiceO;
 						event.target.value = -1;
 						document.getElementById('x').innerHTML = p1Name+'\'S';
 						break;
 					case 5:
-						event.target.innerHTML = "X";
+						event.target.innerHTML = choiceX;
 						event.target.value = 1;
 						document.getElementById('x').innerHTML = p2Name+'\'S';
 						break;
 					case 6:
-						event.target.innerHTML = "0";
+						event.target.innerHTML = choiceO;
 						event.target.value = -1;
 						document.getElementById('x').innerHTML = p1Name+'\'S';
 						break;
 					
 					case 7:
-						event.target.innerHTML = "X";
+						event.target.innerHTML = choiceX;
 						event.target.value = 1;
 						document.getElementById('x').innerHTML = p2Name+'\'S';
 						break;
 					case 8:
-						event.target.innerHTML = "0";
+						event.target.innerHTML = choiceO;
 						event.target.value = -1;
 						document.getElementById('x').innerHTML = p1Name+'\'S';
 						break;
 					case 9:
-						event.target.innerHTML = "X";
+						event.target.innerHTML = choiceX;
 						event.target.value = 1;
 						document.getElementById('x').innerHTML = p2Name+'\'S';
 						break;
@@ -156,7 +189,7 @@ function check(){
 	  		document.getElementById('o').innerHTML = "";
 	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
 	  		document.getElementsByClassName('alertText')[0].innerHTML = p1Name+" WINS!!!";
-	  		setTimeout("strGame();",3000);
+	  		setTimeout("reset();",3000);
 	  	}
 	 else if(
 		(
@@ -195,8 +228,8 @@ function check(){
 	  		document.getElementById('x').innerHTML = "";
 	  		document.getElementById('o').innerHTML = "";
 	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
-	  		document.getElementsByClassName('alertText')[0].innerHTML = "O WINS!!!";
-	  		setTimeout("strGame();",3000);
+	  		document.getElementsByClassName('alertText')[0].innerHTML = p2Name+" WINS!!!";
+	  		setTimeout("reset();",3000);
 	  		
 
 	  	}
@@ -208,7 +241,7 @@ function check(){
 	  		document.getElementById('o').innerHTML = "";
 	  		document.getElementsByClassName('alertBox')[0].style.display = "inline";
 	  		document.getElementsByClassName('alertText')[0].innerHTML = "DRAW...";
-	  		setTimeout("strGame();",3000);
+	  		setTimeout("reset();",3000);
 	 	}
 	 }
 }
@@ -218,7 +251,7 @@ function check(){
 
 
 
-// -----------------------------ALT CODE FOR PICKING O -------------------------------------------------
+// -----------------------------ALT CODE FOR choiceING O -------------------------------------------------
 
 // function strGameO(){
 // 				window.location.href="gameO.html"
